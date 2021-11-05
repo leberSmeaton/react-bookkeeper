@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 The Greens Bookkeeper App was created with the help of the React Router tutorial for learning React Router.
 
+![Greens Bookkeeper App](./src/images/GreensBookkeeper.png)
+
 This app covers the following features:
 
 - New styling updated by me!
