@@ -1,10 +1,20 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <h1>Bookkeeper!</h1>
+      <h1>
+        <Link 
+          to="/"
+          style={{
+            textDecoration: "none",
+            color: "darkgreen"
+          }}
+        >
+          Bookkeeper!
+        </Link>
+      </h1>
       <nav 
         style={{
           borderBottom: "solid 1px",
@@ -14,6 +24,7 @@ function App() {
         <Link to="/invoices">Invoices</Link> | {" "}
         <Link to="/expenses">Expenses</Link>
       </nav>
+      <Outlet />
     </div>
   );
 }

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Santa Clara",
+    "number": 1990,
+    "amount": "$10,100",
+    "due": "10/04/1991"
+  },
+  {
+    "name": "Monica Adams",
+    "number": 1989,
+    "amount": "$4,000",
+    "due": "9/30/1990"
+  },
+  {
+    "name": "Peace Falls",
+    "number": 1991,
+    "amount": "$1,500",
+    "due": "01/29/1992"
+  },
+  {
+    "name": "Monica Adams",
+    "number": 1992,
+    "amount": "$2,000",
+    "due": "01/02/1993"
+  },
+  {
+    "name": "Clean Skies",
+    "number": 1988,
+    "amount": "$11,900",
+    "due": "01/12/1989"
+  }
+]
