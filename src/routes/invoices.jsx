@@ -1,7 +1,6 @@
 import * as React from 'react';
 
-import { 
-  NavLink, 
+import {  
   Link,
   Outlet,
   useSearchParams 
