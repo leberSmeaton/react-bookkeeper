@@ -20,7 +20,7 @@ ReactDOM.render(
           <Route 
             index
             element={
-              <main style={{ padding: "1rem" }}>
+              <main style={{ padding: "1rem",  }}>
                 <p>Select an Invoice</p>
               </main>  
             }

@@ -1,13 +1,22 @@
-import { Link, Outlet } from "react-router-dom";
+import * as React from 'react';
+
+import { 
+  NavLink, 
+  Outlet,
+  useSearchParams 
+} from "react-router-dom";
 import { getInvoices } from "../data";
 
 export default function Invoices(){
   let invoices = getInvoices();
+  let [searchParams, setSearchParams] = useSearchParams({
+    replace: true
+  });
 
   return(
     <div>
       <main style={{
-        padding: "1rem",
+        padding: "0 1rem",
         color: "blue"
       }}>
         <h2>Invoices</h2>
@@ -19,15 +28,45 @@ export default function Invoices(){
             padding: "1rem"
           }}
         >
-          {invoices.map(invoice => (
-            <Link
-              style={{display : "block", margin: "1rem 0"}}
+        <input 
+          value={searchParams.get("filer") || ""}
+          placeholder= "invoice name"
+          onChange={event => {
+            let filter = event.target.value;
+            if (filter) {
+              setSearchParams({ filter });
+            } else {
+              setSearchParams({});
+            }
+          }}
+        />
+        {invoices
+          .filter(invoice => {
+            let filter = searchParams.get("filter");
+            if (!filter) return true;
+            let name = invoice.name.toLowerCase();
+            return name.startsWith(filter.toLocaleLowerCase());
+          })
+        
+          .slice(0,5).map(invoice => (
+            // <Link
+            <NavLink 
+              style={({ isActive }) => {
+                return {
+                  display: "block", 
+                  margin: "1rem 0",
+                  color: isActive ? "red" : "black"
+                }
+              }}
               to={`/invoices/${invoice.number}`}
-              key={invoice.number}
+              key={invoice.number}    
             >
               {invoice.name}
-            </Link>
-          ))}
+              
+            </NavLink>
+            
+        ))}
+        <p>...</p>
         </nav>
         <Outlet />
       </div>

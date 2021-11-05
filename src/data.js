@@ -27,7 +27,25 @@ let invoices = [
     name: "Wide Open Spaces",
     number: 1998,
     amount: "$4,600",
-    due: "01/27/2998"
+    due: "01/27/2008"
+  },
+  {
+    name: "Zed Paving",
+    number: 2001,
+    amount: "$600",
+    due: "11/24/2003"
+  },
+  {
+    name: "Applebees",
+    number: 2002,
+    amount: "$16,800",
+    due: "11/24/2003"
+  },
+  {
+    name: "Bob Ross",
+    number: 1995,
+    amount: "$11,000",
+    due: "07/02/2000"
   }
 ];
 

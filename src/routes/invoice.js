@@ -6,9 +6,11 @@ export default function Invoice(){
   let invoice = getInvoice(parseInt(params.invoiceId, 10));
 
   return(
-    <main>
+    <main style={{
+      padding: "1rem"
+    }}>
       <h2>Invoice: {params.invoiceId}</h2>
-      <p>{invoice.name}: {invoice.number}</p>
+      <p>Name: {invoice.name} - #{invoice.number}</p>
       <p>Due Date: {invoice.due}</p>
     </main>
   ) 
