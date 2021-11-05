@@ -43,9 +43,15 @@ let invoices = [
   },
   {
     name: "Bob Ross",
-    number: 1995,
+    number: 1999,
     amount: "$11,000",
     due: "07/02/2000"
+  },
+  {
+    name: "Clara Santa",
+    number: 1996,
+    amount: "$20,000",
+    due: "01/12/2000"
   }
 ];
 
@@ -56,5 +62,11 @@ export function getInvoices(){
 export function getInvoice(number){
   return invoices.find(
     invoice => invoice.number === number
+  );
+}
+
+export function deleteInvoice(number){
+  invoices = invoices.filter(
+    invoice => invoice.number !== number
   );
 }

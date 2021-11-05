@@ -2,10 +2,12 @@ import * as React from 'react';
 
 import { 
   NavLink, 
+  Link,
   Outlet,
   useSearchParams 
 } from "react-router-dom";
 import { getInvoices } from "../data";
+import QueryNavLink from './queryNavLink';
 
 export default function Invoices(){
   let invoices = getInvoices();
@@ -29,6 +31,7 @@ export default function Invoices(){
           }}
         >
         <input 
+          style={{marginTop:"0"}}
           value={searchParams.get("filer") || ""}
           placeholder= "invoice name"
           onChange={event => {
@@ -50,7 +53,7 @@ export default function Invoices(){
         
           .slice(0,5).map(invoice => (
             // <Link
-            <NavLink 
+            <QueryNavLink 
               style={({ isActive }) => {
                 return {
                   display: "block", 
@@ -62,11 +65,17 @@ export default function Invoices(){
               key={invoice.number}    
             >
               {invoice.name}
-              
-            </NavLink>
+            </QueryNavLink>
             
         ))}
-        <p>...</p>
+        
+        <Link to="/invoices" style={{
+          textDecoration: "none", 
+          color:"black"
+        }}>
+          reset search
+        </Link>
+        
         </nav>
         <Outlet />
       </div>
