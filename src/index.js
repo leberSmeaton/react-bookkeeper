@@ -20,7 +20,7 @@ ReactDOM.render(
           <Route 
             index
             element={
-              <main style={{ padding: "0 1rem",  }}>
+              <main style={{ padding: "0 1rem", fontFamily: "Dongle", fontWeight: "300" }}>
                 <p>Select an Invoice</p>
               </main>  
             }
@@ -30,7 +30,7 @@ ReactDOM.render(
         <Route 
           path="*"
           element={
-            <main style={{ padding: "1rem", border: "1px solid" }}>
+            <main style={{ padding: "1rem", border: "1px solid", fontFamily: "Dongle", fontWeight: "300"  }}>
               <p>There's nothing here!</p>
             </main>
           }

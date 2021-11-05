@@ -18,20 +18,36 @@ export default function Invoices(){
   return(
     <div>
       <main style={{
-        padding: "0 1rem",
-        color: "blue"
+        color: "black",
+        fontFamily: "dongle",
+        fontSize: "25px",
+        fontWeight: "700",
+        backgroundColor: "#fdfff0"
       }}>
-        <h2>Invoices</h2>
+        <h2 style={{
+          padding: ".5rem 10px",
+          margin: "0"
+        }}
+        >
+          Invoices
+        </h2>
       </main>
-      <div style={{display: "flex"}}>
+      <div style={{
+        display: "flex", 
+        fontFamily: "dongle", 
+        backgroundColor: "#fdfff0", 
+        borderRadius: "0 0 15px 15px"
+      }}>
         <nav
           style={{
-            borderRight: "solid 1px",
-            padding: "1rem"
+            borderRight: "solid 1px white",
+            padding: "1rem",
+            backgroundColor: "#e8ecd6", 
+            borderRadius: "15px 0 0 15px"
           }}
         >
         <input 
-          style={{marginTop:"0"}}
+          style={{ marginTop:"0", fontFamily: "dongle" }}
           value={searchParams.get("filer") || ""}
           placeholder= "invoice name"
           onChange={event => {
@@ -58,7 +74,7 @@ export default function Invoices(){
                 return {
                   display: "block", 
                   margin: "1rem 0",
-                  color: isActive ? "red" : "black"
+                  color: isActive ? "#a23131" : "black"
                 }
               }}
               to={`/invoices/${invoice.number}`}
