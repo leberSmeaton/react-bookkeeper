@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { getInvoices } from "../data";
 import QueryNavLink from './queryNavLink';
+// import background from "../images/GreensBookkeeper.png";
 
 export default function Invoices(){
   let invoices = getInvoices();
@@ -15,7 +16,9 @@ export default function Invoices(){
   });
 
   return(
-    <div>
+    <div style={{
+      // backgroundImage: `url(${background})`
+    }}>
       <main style={{
         color: "black",
         fontFamily: "dongle",
