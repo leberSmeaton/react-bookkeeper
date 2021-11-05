@@ -1,6 +1,6 @@
 # Greens Bookkeeper App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Repo Here](https://github.com/leberSmeaton/react-bookkeeper) | [Live Site]()
 
 The Greens Bookkeeper App was created with the help of the React Router tutorial for learning React Router.
 
@@ -19,3 +19,5 @@ This app covers the following features:
 - Creating your own behaviours through composition
 - Server Rendering
 - Added Fonts Icon and Google Fonts
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
