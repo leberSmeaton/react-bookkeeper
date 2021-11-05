@@ -1,6 +1,6 @@
 # Greens Bookkeeper App
 
-[Repo Here](https://github.com/leberSmeaton/react-bookkeeper) | [Live Site](https://www.confident-bell-e411b8.netlify.app/)
+[Repo Here](https://github.com/leberSmeaton/react-bookkeeper) | [Live Site](https://confident-bell-e411b8.netlify.app/)
 
 The Greens Bookkeeper App was created with the help of the React Router tutorial for learning React Router.
 
